@@ -1,0 +1,71 @@
+.sidebarContainer {
+  width: 100%;
+  height: 100vh;
+  background: rgba(29, 29, 29, 0.5);
+  backdrop-filter: blur(2px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  svg {
+    stroke-width: 1.5px;
+    font-size: 2rem;
+
+    color: var(--white);
+    transition: all .4s;
+    cursor: pointer;
+
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 4.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: var(--red);
+    }
+  }
+
+  @media (max-width: 920px) {
+    display: none;
+  }
+}
+
+.profileContainer {
+  margin-top: 1.5625rem;
+  position: relative;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .statusIndicatorContainer {
+    position: absolute;
+    padding: 1px;
+    background-color: var(--white);
+    border-radius: 50%;
+    bottom: 8px;
+    right: 2px;
+  }
+  
+  .statusIndicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--green);
+
+    border-radius: 50%;
+  }
+}
+
+.socialMedias {
+  margin-top: 6.75rem;
+
+  li + li {
+    margin-top: 4.875rem;
+  }
+}
